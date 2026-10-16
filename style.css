@@ -304,7 +304,7 @@ header{
     padding-bottom: var(--spc-4);
 }
 .sect-1{
-    background-image: url(img/is2jales-up2k.webp);
+    background-image: url(https://raw.githubusercontent.com/Lyzaran/juventudedemocraticajales/main/img/is2jales-up2k.webp);
     background-repeat: no-repeat;
     background-position: 50% 80%;
     background-size: cover;
