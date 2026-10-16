@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Slabo+13px&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 /* ================== ROOT ================== */
 :root{ /* VALORES */
     --btn-min-h: 48px; /* ALTURA MINÍMA DE BOTÕES */
     --btn-min-gap: 16px;
     --body-max-w: 100rem;
     --body-lat-m: var(--spc-4);
-    --header-h: 4.5rem;
+    --header-h: 4rem;
     --border-1: 2px;
     --border-2: 4px;
     --transition: 0.3s;
@@ -29,8 +30,8 @@
 :root{ /* CORES */
     --cor-0: #0c0c0c;
     --cor-1: #f4f4f4;
-    --cor-2: #0b204e;
-    --cor-3: #f0b852;
+    --cor-2: #112146;
+    --cor-3: #f8c434;
     --cor-13: #d9071a;
 }
 /* ================== CORE ================== */
@@ -42,8 +43,6 @@
     text-decoration: none;
     box-sizing: border-box;
     transition: var(--transition) ease;
-    /* TEXTO E ETC */
-    font-size: var(--txt-4);
 }
 html{
     font-size: 16px;
@@ -58,6 +57,14 @@ img{
 }
 a{
     text-decoration: underline;
+    position: relative;
+}
+a::after{
+    font-family: "Lilita One", sans-serif;
+    content: ">";
+    position: absolute;
+    right: -1.5rem;
+    bottom: 0;
 }
 .body{
     flex: 1; /* ESQUEMA PRO FOOTER FICAR NO FINAL DA TELA */
@@ -235,8 +242,15 @@ label{
 .ff-1{
     font-family: "Roboto Condensed", sans-serif;
 }
+.caps.ff-1{
+    letter-spacing: 1px;
+}
 .ff-2{
-    font-family: "Slabo 13px", serif;
+    font-family: "Sanchez", serif;
+    letter-spacing: 1px;
+}
+.caps.ff-2{
+    letter-spacing: 4px;
 }
 /* ================== HEADER ================== */
 header{
@@ -251,12 +265,12 @@ header{
 .false-header{
     height: var(--header-h);
 }
-.logo{ /* PROVISÓRIO */
-    color: black;
-    font-weight: bold;
-    font-size: var(--txt-2);
-    display: grid;
-    align-content: center;
+.logo{ 
+    height: 100%;
+    padding: var(--border-2)
+}
+.logo img{
+    height: 100%;
 }
 .links-pg{
     display: flex;
@@ -387,7 +401,7 @@ header{
         height: var(--btn-min-h);
     }
     .links-pg label::after{
-        bottom: 4px;
+        bottom: 6px;
     }
     /* PAGE-1 */
     .sect-1{
