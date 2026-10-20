@@ -40,19 +40,24 @@ document.addEventListener("DOMContentLoaded", () => {
 });
  // ================== REVEAL ==================
 document.addEventListener("DOMContentLoaded", () => {
-    const elements = document.querySelectorAll(".section");
+    const elements = document.querySelectorAll(
+        ".section, .box-r1, .box-r2, .box-r3, .box-r4, .box-r5"
+    );
+
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add("is-visible");
+
                 // Para de observar depois que aparecer
                 observer.unobserve(entry.target);
             }
         });
     }, {
         threshold: 0.3,
-        rootMargin: "0px 0px -50px 0px"
+        rootMargin: "0px 0px -150px 0px"
     });
+
     elements.forEach(element => {
         observer.observe(element);
     });
