@@ -636,7 +636,7 @@ section{
     .sect-7 .less-w{
         width: 70%;
     }
-    .sect-8 .img-container{
+    .sect-8 .txt-container{
         max-width: 50%;
     }
     .sect-9 .txt-container{
@@ -648,7 +648,7 @@ section{
     .sect-10 .img-container{
         max-width: 50%;
     }
-    .sect-11 .img-container{
+    .sect-11 .txt-container{
         max-width: 50%;
     }
     .sect-12 .txt-container{
@@ -688,8 +688,8 @@ section{
         max-width: 50%;
     }
     /* PAGE 2 */
-    .sect-21 .img-container{
-        max-width: 55%;
+    .sect-21 .txt-container{
+        max-width: 50%;
     }
     .sect-22 .txt-container{
         max-width: 55%;

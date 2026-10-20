@@ -35,11 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     inputs.forEach(input => {
         input.addEventListener("change", updatePage);
     });
-    // ================== FUNÇÕES AO ABRIR SITE ==================
-    updatePage();
-});
- // ================== REVEAL ==================
-document.addEventListener("DOMContentLoaded", () => {
+     // ================== REVEAL ==================
     const elements = document.querySelectorAll(
         ".section, .box-r1, .box-r2, .box-r3, .box-r4, .box-r5"
     );
@@ -61,4 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
     elements.forEach(element => {
         observer.observe(element);
     });
+    // ================== FUNÇÕES AO ABRIR SITE ==================
+    updatePage();
 });
