@@ -701,6 +701,9 @@ section{
         justify-content: center;
     }
     /* PAGE 3 */
+    section.sect-25{
+        min-height: calc((100vh - var(--header-h))) !important;
+    }
     .sect-25 .txt-container{
         width: 50%;
     }
