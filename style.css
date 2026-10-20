@@ -217,6 +217,110 @@ label{
     box-decoration-break: clone;
     padding: 0 var(--border-2);
 }
+/* BOX ANIMADA */
+.box-r0 {
+    background-color: transparent;
+    background-image: linear-gradient(
+        to right,
+        var(--cor-0),
+        var(--cor-0)
+    );
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 0% 100%;
+
+    line-height: 1.5;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    padding: 0 var(--border-2);
+
+    /* Animação do destaque */
+    transition: background-size 0.7s ease;
+    transition-delay: 0.4s;
+}
+.box-r1 {
+    background-color: transparent;
+    background-image: linear-gradient(
+        to right,
+        var(--cor-1),
+        var(--cor-1)
+    );
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 0% 100%;
+
+    line-height: 1.5;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    padding: 0 var(--border-2);
+
+    /* Animação do destaque */
+    transition: background-size 0.7s ease;
+    transition-delay: 0.4s;
+}
+.box-r2 {
+    background-color: transparent;
+    background-image: linear-gradient(
+        to right,
+        var(--cor-2),
+        var(--cor-2)
+    );
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 0% 100%;
+
+    line-height: 1.5;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    padding: 0 var(--border-2);
+
+    /* Animação do destaque */
+    transition: background-size 0.7s ease;
+    transition-delay: 0.4s;
+}
+.box-r3 {
+    background-color: transparent;
+    background-image: linear-gradient(
+        to right,
+        var(--cor-3),
+        var(--cor-3)
+    );
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 0% 100%;
+
+    line-height: 1.5;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    padding: 0 var(--border-2);
+
+    /* Animação do destaque */
+    transition: background-size 0.7s ease;
+    transition-delay: 0.4s;
+}
+.box-r13 {
+    background-color: transparent;
+    background-image: linear-gradient(
+        to right,
+        var(--cor-13),
+        var(--cor-13)
+    );
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 0% 100%;
+
+    line-height: 1.5;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    padding: 0 var(--border-2);
+
+    /* Animação do destaque */
+    transition: background-size 0.7s ease;
+    transition-delay: 0.4s;
+}
+.section.is-visible .box-r0, .section.is-visible .box-r1, .section.is-visible .box-r2, .section.is-visible .box-r3, .section.is-visible .box-r13 {
+    background-size: 100% 100%;
+}
 /* FONT WEIGHT */
 .fw-r{
     font-weight: 400;
@@ -285,10 +389,11 @@ header{
     height: var(--header-h);
 }
 .logo{ 
-    height: 100%;
+    height: 90%;
     padding: var(--border-2)
 }
 .logo img{
+    border-radius: 50%;
     height: 100%;
 }
 .links-pg{
@@ -456,6 +561,19 @@ section{
 /* PAGE 3 */
  section.sect-25{
     min-height: calc((100vh - var(--header-h)));
+}
+.sect-25 img{
+    border-radius: 50%;
+}
+/* REVEAL */
+.section{
+    opacity: 0;
+    transform: translateY(2rem);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 /* ================== DESKTOP ================== */
 @media (min-width: 1024px){
@@ -653,13 +771,17 @@ section{
     .links-pg{
         gap: var(--btn-min-gap);
     }
+    .links-pg label span{
+        font-size: 19px;
+    }
     .links-pg label{
         display: grid;
         align-content: center;
         height: var(--btn-min-h);
     }
     .links-pg label::after{
-        bottom: 6px;
+        height: var(--border-1);
+        bottom: 8px;
     }
     p:has(a){
         display: flex;
@@ -725,7 +847,7 @@ section{
     }
     /* PAGE 3 */
     .sect-25 .img-container img{
-        padding-top: var(--spc-1);
+        padding-top: var(--spc-3);
     }
     .sect-25 .img-container{
         width: 90%;
